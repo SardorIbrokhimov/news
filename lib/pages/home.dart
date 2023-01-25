@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:news/models/news_model.dart';
 import 'package:news/pages/about_page.dart';
+import 'package:news/screens/breaking.dart';
+import 'package:news/screens/popular.dart';
+import 'package:news/screens/science.dart';
 
 import '../models/about.dart';
+import '../screens/sport.dart';
 
 class Home extends StatefulWidget {
   static const String id = "jhbvhb";
@@ -37,11 +41,16 @@ class _HomeState extends State<Home> {
           ),
           body: TabBarView(
             children: [
+              Breaking(),
+              Sport(),
+              Popular(),
+              Science()
 
             ],
           ),
         ));
   }
+
 
   buildcontainer(
       {required String img,
